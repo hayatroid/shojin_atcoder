@@ -18,6 +18,7 @@
 ```rust
 let mut dfs = vec![s];
 while let Some(v) = dfs.pop() {
+    visited[v] = true;
     // 現在の頂点に対する操作
     for &u in &g[v] {
         if visited[u] { continue }
@@ -30,6 +31,7 @@ while let Some(v) = dfs.pop() {
 let mut bfs = VecDeque::new();
 bfs.push_back(s)
 while let Some(v) = bfs.pop_front() {
+    visited[v] = true;
     // 現在の頂点に対する操作
     for &u in &g[v] {
         if visited[u] { continue }
