@@ -20,6 +20,7 @@ let mut dfs = vec![s];
 while let Some(v) = dfs.pop() {
     // 現在の頂点に対する操作
     for &u in &g[v] {
+        if visited[u] { continue }
         // 次の頂点に対する操作
     }
 }
@@ -31,6 +32,7 @@ bfs.push_back(s)
 while let Some(v) = bfs.pop_front() {
     // 現在の頂点に対する操作
     for &u in &g[v] {
+        if visited[u] { continue }
         // 次の頂点に対する操作
     }
 }
