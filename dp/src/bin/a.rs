@@ -5,7 +5,7 @@ fn main() {
         n: usize,
         h: [i32; n],
     }
-    let mut dp = vec![1 << 29; n];
+    let mut dp = vec![std::i32::MAX; n];
     dp[0] = 0;
     dp[1] = (h[1] - h[0]).abs();
     for i in 2..n {
